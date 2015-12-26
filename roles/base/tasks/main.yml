@@ -1,5 +1,0 @@
----
-  - name: install packages
-    apt: name={{item}} update_cache=yes state=present
-    with_items: [vim, tmux, python-pip, unzip, mysql-client, libfontconfig, libmysqlclient-dev, mercurial, mongodb-clients, postgresql-server-dev-9.3, redis-tools]
-

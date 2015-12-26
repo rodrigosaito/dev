@@ -3,10 +3,6 @@
     "name": "",
     "vcs": true
   },
-  "variables": {
-    "atlas_username": "{{env `ATLAS_USERNAME`}}",
-    "atlas_name": "{{env `ATLAS_NAME`}}"
-  },
   "provisioners": [
     {
       "type": "shell",
@@ -26,8 +22,11 @@
     },
     {
       "type": "ansible-local",
-      "playbook_file": "playbook.yml",
-      "role_paths": [ "roles/base" ]
+      "playbook_file": "ansible/playbook.yml",
+      "role_paths": [
+        "ansible/roles/base",
+        "ansible/roles/rvm1-ansible"
+      ]
     }
   ],
   "builders": [
