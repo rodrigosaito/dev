@@ -31,7 +31,8 @@
         "ansible/roles/base",
         "ansible/roles/rvm1-ansible",
         "ansible/roles/nodejs",
-        "ansible/roles/oracle-jdk"
+        "ansible/roles/oracle-jdk",
+        "ansible/roles/golang"
       ]
     }
   ],
@@ -90,7 +91,7 @@
       "artifact_type": "vagrant.box",
       "metadata": {
         "provider": "virtualbox",
-        "version": "0.2.0"
+        "version": "0.3.0"
       }
     }]
   ]
