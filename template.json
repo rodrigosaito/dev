@@ -1,8 +1,11 @@
 {
   "push": {
     "name": "",
-    "vcs": true,
-    "include": [ "ansible/roles/rvm1-ansible/tasks/main.yml" ]
+    "vcs": false,
+    "exclude": [
+      ".git/*",
+      "packer_cache/*"
+    ]
   },
   "provisioners": [
     {
@@ -26,7 +29,9 @@
       "playbook_file": "ansible/playbook.yml",
       "role_paths": [
         "ansible/roles/base",
-        "ansible/roles/rvm1-ansible"
+        "ansible/roles/rvm1-ansible",
+        "ansible/roles/nodejs",
+        "ansible/roles/oracle-jdk"
       ]
     }
   ],
@@ -85,7 +90,7 @@
       "artifact_type": "vagrant.box",
       "metadata": {
         "provider": "virtualbox",
-        "version": "0.0.1"
+        "version": "0.2.0"
       }
     }]
   ]

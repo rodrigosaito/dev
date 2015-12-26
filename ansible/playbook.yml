@@ -4,3 +4,5 @@
   roles:
     - base
     - { role: rvm1-ansible, tags: ruby, sudo: True }
+    - nodejs
+    - oracle-jdk

@@ -1,3 +1,6 @@
 [submodule "ansible/roles/rvm1-ansible"]
 	path = ansible/roles/rvm1-ansible
 	url = https://github.com/rvm/rvm1-ansible.git
+[submodule "ansible/roles/nodejs"]
+	path = ansible/roles/nodejs
+	url = https://github.com/nodesource/ansible-nodejs-role.git
