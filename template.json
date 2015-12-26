@@ -81,7 +81,7 @@
     },
     {
       "type": "atlas",
-      "artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
+      "artifact": "rodrigosaito/dev",
       "artifact_type": "vagrant.box",
       "metadata": {
         "provider": "virtualbox",
