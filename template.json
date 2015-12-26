@@ -1,7 +1,8 @@
 {
   "push": {
     "name": "",
-    "vcs": true
+    "vcs": true,
+    "include": [ "ansible/roles/rvm1-ansible/tasks/main.yml" ]
   },
   "provisioners": [
     {
