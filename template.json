@@ -32,7 +32,9 @@
         "ansible/roles/rvm1-ansible",
         "ansible/roles/nodejs",
         "ansible/roles/oracle-jdk",
-        "ansible/roles/golang"
+        "ansible/roles/golang",
+        "ansible/roles/phantomjs",
+        "ansible/roles/docker"
       ]
     }
   ],

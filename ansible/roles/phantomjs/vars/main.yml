@@ -1,0 +1,5 @@
+---
+  phantomjs_download_url: https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2
+  phantomjs_download_sha256: a1d9628118e270f26c4ddd1d7f3502a93b48ede334b8585d11c1c3ae7bc7163a
+  phantomjs_filename: phantomjs-1.9.8-linux-x86_64.tar.bz2
+  phantomjs_dir: phantomjs-1.9.8-linux-x86_64

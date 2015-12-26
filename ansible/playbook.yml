@@ -7,3 +7,15 @@
     - nodejs
     - oracle-jdk
     - golang
+    - phantomjs
+    - docker
+
+  tasks:
+    - mysql container
+      docker:
+        name: mysql
+        image: tutum/mysql
+        ports:
+          - "3306:3306"
+        env:
+          MYSQL_PASS: admin

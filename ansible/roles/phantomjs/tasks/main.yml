@@ -1,0 +1,13 @@
+---
+  - name: download phantomjs
+    get_url:
+      url={{phantomjs_download_url}}
+      dest=/usr/local/src/
+      sha256sum={{phantomjs_download_sha256}}
+
+  - name: unarchive phantomjs
+    unarchive: src=/usr/local/src/{{phantomjs_filename}} dest=/usr/local/ copy=no
+
+  - file: src=/usr/local/{{phantomjs_dir}} dest=/usr/local/phantomjs state=link
+
+  - file: src=/usr/local/phantomjs/bin/phantomjs dest=/usr/local/bin/phantomjs state=link
