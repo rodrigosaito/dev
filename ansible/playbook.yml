@@ -8,10 +8,14 @@
     - oracle-jdk
     - golang
     - phantomjs
-    - docker
 
   tasks:
-    - mysql container
+    - user: name=vagrant group=docker
+
+    - name: Install docker-py as a workaround for Ansible issue
+      pip: name=docker-py version=1.2.3
+
+    - name: mysql container
       docker:
         name: mysql
         image: tutum/mysql
@@ -19,3 +23,41 @@
           - "3306:3306"
         env:
           MYSQL_PASS: admin
+
+    - name: mongodb container
+      docker:
+        name: mongodb
+        image: tutum/mongodb
+        ports:
+          - "27017:27017"
+          - "28017:28017"
+        env:
+          AUTH: no
+
+    - name: rabbitmq container
+      docker:
+        name: rabbitmq
+        image: tutum/rabbitmq
+        ports:
+          - "5672:5672"
+          - "15672:15672"
+        env:
+          RABBITMQ_PASS: admin
+
+    - name: redis container
+      docker:
+        name: redis
+        image: tutum/redis
+        ports:
+          - "6379:6379"
+        env:
+          REDIS_PASS: "**None**"
+
+    - name: postgres container
+      docker:
+        name: postgres
+        image: tutum/postgresql
+        ports:
+          - "5432:5432"
+        env:
+          POSTGRES_PASS: postgres
