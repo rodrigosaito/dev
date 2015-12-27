@@ -33,7 +33,8 @@
         "ansible/roles/oracle-jdk",
         "ansible/roles/golang",
         "ansible/roles/phantomjs",
-        "ansible/roles/docker"
+        "ansible/roles/docker",
+        "ansible/roles/maven"
       ]
     },
     {

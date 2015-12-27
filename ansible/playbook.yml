@@ -8,6 +8,7 @@
     - oracle-jdk
     - golang
     - phantomjs
+    - maven
 
   tasks:
     - user: name=vagrant group=docker

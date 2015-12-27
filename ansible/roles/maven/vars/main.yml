@@ -1,0 +1,10 @@
+---
+# path for ansible to store downloaded or templated data
+ansible_data_path: /usr/local/src
+
+maven_mirror: http://mirror.nbtelecom.com.br/apache/maven
+maven_sha256: 6e3e9c949ab4695a204f74038717aa7b2689b1be94875899ac1b3fe42800ff82
+maven_version: 3.3.9
+maven_name: apache-maven-{{ maven_version }}
+maven_filename: "{{ maven_name }}-bin.tar.gz"
+maven_download_file: "{{ maven_mirror}}/maven-3/{{ maven_version }}/binaries/{{ maven_filename }}"

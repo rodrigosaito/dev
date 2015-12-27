@@ -1,0 +1,16 @@
+---
+  - name: download maven
+    get_url:
+      url={{ maven_download_file }}
+      dest={{ ansible_data_path }}
+      sha256sum={{ maven_sha256 }}
+
+  - name: unarchive maven
+    unarchive:
+      src={{ ansible_data_path }}/{{ maven_filename }}
+      dest=/opt/
+      copy=no
+
+  - file: src=/opt/{{ maven_name }}  dest=/opt/maven state=link
+
+  - file: src=/opt/maven/bin/mvn dest=/usr/local/bin/mvn state=link
