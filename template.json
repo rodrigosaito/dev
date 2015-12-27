@@ -17,9 +17,8 @@
             "scripts/base.sh",
             "scripts/vagrant.sh",
             "scripts/virtualbox.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh",
-            "scripts/ansible.sh"
+            "scripts/ansible.sh",
+            "scripts/docker.sh"
           ]
         }
       }
@@ -36,6 +35,18 @@
         "ansible/roles/phantomjs",
         "ansible/roles/docker"
       ]
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
+      "override": {
+        "virtualbox-iso": {
+          "scripts": [
+            "scripts/cleanup.sh",
+            "scripts/zerodisk.sh"
+          ]
+        }
+      }
     }
   ],
   "builders": [
@@ -93,7 +104,7 @@
       "artifact_type": "vagrant.box",
       "metadata": {
         "provider": "virtualbox",
-        "version": "0.3.0"
+        "version": "0.4.3"
       }
     }]
   ]
