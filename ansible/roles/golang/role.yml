@@ -1,0 +1,6 @@
+---
+- name: test golang role
+  hosts: all
+  sudo: yes
+  roles:
+    - role: "golang"

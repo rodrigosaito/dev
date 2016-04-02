@@ -1,0 +1,22 @@
+---
+- name: download go tarball
+  get_url:
+    url={{ go_download_location }}
+    dest=/usr/local/src/
+    sha256sum={{ go_tarball_checksum }}
+
+- name: unarchive go
+  unarchive:
+    src=/usr/local/src/{{ go_tarball }}
+    dest=/usr/local/
+    copy=no
+
+- name: set GOPATH 
+  copy:
+    src=gopath.sh
+    dest=/etc/profile.d
+
+- name: add $GOPATH/bin to environment
+  copy:
+    src=gobin.sh
+    dest=/etc/profile.d
