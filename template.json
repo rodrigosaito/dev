@@ -1,6 +1,7 @@
 {
   "push": {
     "name": "",
+    "vcs": true
   },
   "provisioners": [
     {
