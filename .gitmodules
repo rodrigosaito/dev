@@ -4,6 +4,3 @@
 [submodule "ansible/roles/nodejs"]
 	path = ansible/roles/nodejs
 	url = https://github.com/nodesource/ansible-nodejs-role.git
-[submodule "ansible/roles/golang"]
-	path = ansible/roles/golang
-	url = https://github.com/jlund/ansible-go.git
