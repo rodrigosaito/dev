@@ -1,11 +1,6 @@
 {
   "push": {
     "name": "",
-    "vcs": false,
-    "exclude": [
-      ".git/*",
-      "packer_cache/*"
-    ]
   },
   "provisioners": [
     {
@@ -29,7 +24,6 @@
       "playbook_file": "ansible/playbook.yml",
       "role_paths": [
         "ansible/roles/base",
-        "ansible/roles/nodejs",
         "ansible/roles/oracle-jdk",
         "ansible/roles/golang",
         "ansible/roles/phantomjs",
