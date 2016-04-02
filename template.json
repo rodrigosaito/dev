@@ -18,7 +18,8 @@
             "scripts/vagrant.sh",
             "scripts/virtualbox.sh",
             "scripts/ansible.sh",
-            "scripts/docker.sh"
+            "scripts/docker.sh",
+            "scripts/rvm.sh"
           ]
         }
       }

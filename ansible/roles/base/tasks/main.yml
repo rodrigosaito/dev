@@ -13,3 +13,4 @@
       - mongodb-clients
       - postgresql-server-dev-9.3
       - redis-tools
+      - libgmp-dev
