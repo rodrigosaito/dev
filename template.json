@@ -29,7 +29,6 @@
       "playbook_file": "ansible/playbook.yml",
       "role_paths": [
         "ansible/roles/base",
-        "ansible/roles/rvm1-ansible",
         "ansible/roles/nodejs",
         "ansible/roles/oracle-jdk",
         "ansible/roles/golang",
