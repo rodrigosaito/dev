@@ -1,0 +1,25 @@
+---
+- name: Install requirements
+  apt: pkg={{ item }} state=present
+  with_items:
+    - make
+    - build-essential
+    - libssl-dev
+    - zlib1g-dev
+    - libbz2-dev
+    - libreadline-dev
+    - libsqlite3-dev
+    - wget
+    - curl
+    - llvm
+
+- name: clone pyenv
+  git: repo=https://github.com/yyuu/pyenv.git dest=/usr/local/pyenv
+
+- group: name=pyenv state=present
+
+- user: name=pyenv comment="Py Env" group=pyenv createhome=no
+
+- file: dest=/usr/local/pyenv owner=pyenv group=pyenv state=directory mode=0775 recurse=yes
+
+- copy: src=pyenv.sh dest=/etc/profile.d/pyenv.sh owner=vagrant group=vagrant

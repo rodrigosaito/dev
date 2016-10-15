@@ -8,9 +8,10 @@
     - golang
     - phantomjs
     - maven
+    - pyenv
 
   tasks:
-    - user: name=vagrant group=docker
+    - user: name=vagrant groups=docker,rvm,pyenv append=yes
 
     - name: Install docker-py as a workaround for Ansible issue
       pip: name=docker-py version=1.2.3
