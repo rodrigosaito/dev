@@ -13,13 +13,13 @@
     - curl
     - llvm
 
-- name: clone pyenv
-  git: repo=https://github.com/yyuu/pyenv.git dest=/usr/local/pyenv
-
 - group: name=pyenv state=present
 
 - user: name=pyenv comment="Py Env" group=pyenv createhome=no
 
-- file: dest=/usr/local/pyenv owner=pyenv group=pyenv state=directory mode=0775 recurse=yes
+- name: clone pyenv
+  git: repo=https://github.com/yyuu/pyenv.git dest=/usr/local/pyenv
+
+- file: dest=/usr/local/pyenv owner=pyenv group=pyenv state=directory recurse=yes
 
 - copy: src=pyenv.sh dest=/etc/profile.d/pyenv.sh owner=vagrant group=vagrant

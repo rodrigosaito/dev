@@ -3,18 +3,17 @@
   sudo: yes
   roles:
     - base
-    - nodesource.node
     - oracle-jdk
     - golang
     - phantomjs
     - maven
     - pyenv
+    - nodejs
+    - docker.ubuntu
+    - { role: rvm1-ansible, tags: ruby, become: yes, rvm1_gpg_keys: '' }
 
   tasks:
     - user: name=vagrant groups=docker,rvm,pyenv append=yes
-
-    - name: Install docker-py as a workaround for Ansible issue
-      pip: name=docker-py version=1.2.3
 
     - name: mysql container
       docker:

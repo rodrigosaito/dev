@@ -1,11 +1,17 @@
 Vagrant.configure(2) do |config|
-  config.vm.box = "rodrigosaito/dev"
+  config.vm.box = "ubuntu/trusty64"
 
   config.vm.network "private_network", ip: "192.168.50.4"
 
   config.vm.provider "virtualbox" do |vb|
     # Use VBoxManage to customize the VM. For example to change memory:
     vb.customize ["modifyvm", :id, "--memory", "2048"]
+  end
+
+  # workaround to get gpg key for rvm
+  config.vm.provision "shell", inline: "command curl -sSL https://rvm.io/mpapis.asc | gpg --import -"
+  config.vm.provision "ansible_local" do |ansible|
+    ansible.playbook = "ansible/playbook.yml"
   end
 
   config.vm.synced_folder ".", "/vagrant", type: "nfs"
