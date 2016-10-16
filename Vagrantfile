@@ -16,9 +16,6 @@ Vagrant.configure(2) do |config|
 
   config.vm.synced_folder ".", "/vagrant", type: "nfs"
   config.vm.synced_folder "/Users/rodrigosaito/dev", "/home/vagrant/dev", type: "nfs"
-  config.vm.synced_folder "/Users/rodrigosaito/moip", "/home/vagrant/moip", type: "nfs"
-  config.vm.synced_folder "/Users/rodrigosaito/.m2", "/home/vagrant/.m2", type: "nfs"
-  config.vm.synced_folder "/Users/rodrigosaito/.ssh", "/home/vagrant/ssh", type: "nfs"
 
   config.vm.network "forwarded_port", guest: 3000, host: 3000
   config.vm.network "forwarded_port", guest: 3306, host: 3306
