@@ -16,6 +16,6 @@
 - name: clone pyenv
   git: repo=https://github.com/yyuu/pyenv.git dest=/usr/local/pyenv
 
-- file: dest=/usr/local/pyenv owner=vagrant group=vagrant state=directory recurse=yes
+- file: dest=/usr/local/pyenv owner=ubuntu group=ubuntu state=directory recurse=yes
 
-- copy: src=pyenv.sh dest=/etc/profile.d/pyenv.sh owner=vagrant group=vagrant
+- copy: src=pyenv.sh dest=/etc/profile.d/pyenv.sh owner=ubuntu group=ubuntu

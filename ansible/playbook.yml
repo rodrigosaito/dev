@@ -13,7 +13,7 @@
     - { role: rvm1-ansible, tags: ruby, become: yes, rvm1_gpg_keys: '' }
 
   tasks:
-    - user: name=vagrant groups=docker,rvm append=yes
+    - user: name=ubuntu groups=docker,rvm append=yes
 
     - name: mysql container
       docker:

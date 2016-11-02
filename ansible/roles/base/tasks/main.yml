@@ -11,7 +11,7 @@
       - libmysqlclient-dev
       - mercurial
       - mongodb-clients
-      - postgresql-server-dev-9.3
+      - postgresql-server-dev-9.5
       - redis-tools
       - libgmp-dev
       - git
